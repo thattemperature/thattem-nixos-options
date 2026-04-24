@@ -9,11 +9,15 @@
       nixosModules = {
 
         default = {
-          imports = with self.nixosModules; common.imports ++ private.imports;
+          imports = with self.nixosModules; common.imports ++ packages.imports ++ private.imports;
         };
 
         common = {
           imports = [ ./common.nix ];
+        };
+
+        packages = {
+          imports = [ ./packages.nix ];
         };
 
         private = {
