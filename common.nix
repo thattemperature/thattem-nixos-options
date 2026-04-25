@@ -2,7 +2,7 @@
 
 let
 
-  cfg = config.thattem-nixos;
+  cfg = config.thattem.nixos;
 
 in
 
@@ -12,7 +12,7 @@ in
     with lib;
     with types;
     {
-      thattem-nixos = {
+      thattem.nixos = {
         hardware.enable = mkEnableOption "hardware management";
         display.enable = mkEnableOption "basic display";
         desktop.enable = mkEnableOption "desktop environment";
@@ -23,10 +23,10 @@ in
 
   config = lib.mkMerge [
     (lib.mkIf cfg.desktop.enable {
-      thattem-nixos.display.enable = true;
+      thattem.nixos.display.enable = true;
     })
     (lib.mkIf cfg.advanced.enable {
-      thattem-nixos.desktop.enable = true;
+      thattem.nixos.desktop.enable = true;
     })
   ];
 

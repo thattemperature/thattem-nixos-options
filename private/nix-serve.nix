@@ -6,7 +6,7 @@
     with lib;
     with types;
     {
-      private.nix-serve = {
+      thattem.private.nix-serve = {
         substituters = mkOption {
           type = listOf str;
           default = [ ];

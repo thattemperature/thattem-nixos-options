@@ -18,7 +18,7 @@
     in
 
     {
-      private.firmware = {
+      thattem.private.firmware = {
         cpu = mkOption {
           type = firmware-type;
           default = "common";

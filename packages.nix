@@ -6,7 +6,7 @@
     with lib;
     with types;
     {
-      thattem-packages = {
+      thattem.packages = {
         python-lsp = mkOption {
           type = nullOr package;
           default = null;

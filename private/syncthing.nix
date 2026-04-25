@@ -26,7 +26,7 @@
     in
 
     {
-      private.syncthing = {
+      thattem.private.syncthing = {
         devices = mkOption {
           type = attrsOf (attrsOf str);
           default = { };

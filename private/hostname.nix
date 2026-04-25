@@ -6,7 +6,7 @@
     with lib;
     with types;
     {
-      private.hostname = mkOption {
+      thattem.private.hostname = mkOption {
         type = str;
         default = "nixos";
       };

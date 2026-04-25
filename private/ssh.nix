@@ -6,7 +6,7 @@
     with lib;
     with types;
     {
-      private.ssh = {
+      thattem.private.ssh = {
         known-public-keys = mkOption {
           type = attrsOf str;
           default = { };

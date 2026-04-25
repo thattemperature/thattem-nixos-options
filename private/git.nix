@@ -6,7 +6,7 @@
     with lib;
     with types;
     {
-      private.git = {
+      thattem.private.git = {
         userName = mkOption {
           type = str;
           default = "";
