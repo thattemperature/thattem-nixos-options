@@ -9,7 +9,9 @@
       nixosModules = {
 
         default = {
-          imports = with self.nixosModules; common.imports ++ packages.imports ++ private.imports;
+          imports =
+            with self.nixosModules;
+            common.imports ++ packages.imports ++ private.imports ++ secrets.imports;
         };
 
         common = {
@@ -22,6 +24,10 @@
 
         private = {
           imports = [ ./private ];
+        };
+
+        secrets = {
+          imports = [ ./secrets ];
         };
 
       };

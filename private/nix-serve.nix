@@ -15,10 +15,6 @@
           type = listOf str;
           default = [ ];
         };
-        secret-key-file = mkOption {
-          type = nullOr str;
-          default = null;
-        };
       };
     };
 
