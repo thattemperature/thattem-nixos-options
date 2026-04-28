@@ -18,6 +18,14 @@ in
         desktop.enable = mkEnableOption "desktop environment";
         advanced.enable = mkEnableOption "advanced applications";
         special.enable = mkEnableOption "encrypted settings";
+        programming.enable = mkEnableOption "programming applications";
+
+        type = mkOption {
+          type = enum [
+            "common"
+            "server"
+          ];
+        };
       };
     };
 
