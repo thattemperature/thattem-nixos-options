@@ -13,12 +13,12 @@ in
     with types;
     {
       thattem.nixos = {
-        hardware.enable = mkEnableOption "hardware management";
-        display.enable = mkEnableOption "basic display";
-        desktop.enable = mkEnableOption "desktop environment";
         advanced.enable = mkEnableOption "advanced applications";
-        special.enable = mkEnableOption "encrypted settings";
+        desktop.enable = mkEnableOption "desktop environment";
+        display.enable = mkEnableOption "basic display";
+        hardware.enable = mkEnableOption "hardware management";
         programming.enable = mkEnableOption "programming applications";
+        special.enable = mkEnableOption "encrypted settings";
 
         type = mkOption {
           type = enum [
@@ -30,12 +30,15 @@ in
     };
 
   config = lib.mkMerge [
+
     (lib.mkIf cfg.desktop.enable {
       thattem.nixos.display.enable = true;
     })
+
     (lib.mkIf cfg.advanced.enable {
       thattem.nixos.desktop.enable = true;
     })
+
   ];
 
 }
