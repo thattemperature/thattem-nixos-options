@@ -1,6 +1,7 @@
 {
 
   imports = [
+    ./boot.nix
     ./firmware.nix
     ./git.nix
     ./hostname.nix
