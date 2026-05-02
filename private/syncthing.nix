@@ -52,15 +52,6 @@
           type = folder-devices-type;
           default = [ ];
         };
-
-        key = mkOption {
-          type = nullOr str;
-          default = null;
-        };
-        cert = mkOption {
-          type = nullOr str;
-          default = null;
-        };
       };
     };
 
