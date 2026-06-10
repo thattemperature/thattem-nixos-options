@@ -3,8 +3,10 @@
 {
 
   options =
-    with lib;
-    with types;
+    let
+      inherit (lib) mkOption;
+      inherit (lib.types) attrsOf listOf oneOf pathWith str submodule;
+    in
 
     let
 

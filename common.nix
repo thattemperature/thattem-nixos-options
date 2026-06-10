@@ -9,8 +9,10 @@ in
 {
 
   options =
-    with lib;
-    with types;
+    let
+      inherit (lib) mkEnableOption mkOption mkIf mkMerge;
+      inherit (lib.types) enum;
+    in
     {
       thattem.nixos = {
         advanced.enable = mkEnableOption "advanced applications";
