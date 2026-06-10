@@ -3,8 +3,10 @@
 {
 
   options =
-    with lib;
-    with types;
+    let
+      inherit (lib) mkOption;
+      inherit (lib.types) nullOr package;
+    in
     {
       thattem.packages = {
         python-lsp = mkOption {

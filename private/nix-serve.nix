@@ -3,8 +3,10 @@
 {
 
   options =
-    with lib;
-    with types;
+    let
+      inherit (lib) mkOption;
+      inherit (lib.types) listOf str;
+    in
     {
       thattem.private.nix-serve = {
         substituters = mkOption {
