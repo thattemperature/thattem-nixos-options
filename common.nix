@@ -10,7 +10,7 @@ in
 
   options =
     let
-      inherit (lib) mkEnableOption mkOption mkIf mkMerge;
+      inherit (lib) mkEnableOption mkOption;
       inherit (lib.types) enum;
     in
     {
