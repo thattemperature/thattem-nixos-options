@@ -21,6 +21,14 @@
           type = str;
           default = "";
         };
+        botUserName = mkOption {
+          type = str;
+          default = "";
+        };
+        botUserEmail = mkOption {
+          type = str;
+          default = "";
+        };
       };
     };
 
