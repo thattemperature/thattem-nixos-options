@@ -34,11 +34,11 @@ in
   config = lib.mkMerge [
 
     (lib.mkIf cfg.desktop.enable {
-      thattem.nixos.display.enable = true;
+      thattem.nixos.display.enable = lib.mkDefault true;
     })
 
     (lib.mkIf cfg.advanced.enable {
-      thattem.nixos.desktop.enable = true;
+      thattem.nixos.desktop.enable = lib.mkDefault true;
     })
 
   ];
