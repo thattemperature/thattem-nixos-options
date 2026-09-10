@@ -5,7 +5,7 @@
     ./firmware.nix
     ./git.nix
     ./hostname.nix
-    ./nix-serve.nix
+    ./nix-cache.nix
     ./ssh.nix
     ./syncthing.nix
   ];

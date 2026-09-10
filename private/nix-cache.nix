@@ -8,7 +8,7 @@
       inherit (lib.types) listOf str;
     in
     {
-      thattem.private.nix-serve = {
+      thattem.private.nix-cache = {
         substituters = mkOption {
           type = listOf str;
           default = [ ];

@@ -4,8 +4,8 @@
     ./authinfo.nix
     ./dae.nix
     ./environment-variables.nix
+    ./nix-cache.nix
     ./nix-configurations.nix
-    ./nix-serve.nix
     ./password.nix
     ./syncthing.nix
   ];
